@@ -7,3 +7,34 @@
     @apply dark:bg-[#484554] bg-[#FCF7FF] dark:text-[#FCF7FF] text-[#000000];
   }
 }
+
+
+
+/* toggle button */
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.toggle-input:checked + .slider {
+  background-color: #8576FF;
+}
+
+.toggle-input:focus + .slider {
+  box-shadow: 0 0 1px #8576FF;
+}
+
+.toggle-input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}

@@ -13,6 +13,10 @@
       <td>tailwindcss</td>
       <td>CSS styling library</td>
     </tr>
+    <tr>
+      <td>chart.js react-chartjs-2</td>
+      <td>BAR chart library</td>
+    </tr>
   </table>
 
 #### How to build a docker image from the source code and run the app

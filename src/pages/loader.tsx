@@ -40,7 +40,7 @@ export default function Loader({
       ) : (
         <div className="flex items-center justify-center">
           <img
-            src={"/logo_blue.png"}
+            src={"/logo512.png"}
             className=" w-16 loader-img"
             alt="99Apt logo"
           />

@@ -2,6 +2,8 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Loader from "./pages/loader";
 import "./index.css";
+//import redux
+import StoreProvider from "./stores/StoreProvider";
 
 const AppRoute = React.lazy(() => import("./App"));
 
@@ -10,8 +12,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Suspense fallback={<Loader />}>
-      <AppRoute />
-    </Suspense>
+    <StoreProvider>
+      <Suspense fallback={<Loader />}>
+        <AppRoute />
+      </Suspense>
+    </StoreProvider>
   </React.StrictMode>
 );
