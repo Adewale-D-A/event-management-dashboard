@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: event-management-dashboard
+    image: event-management-dashboard:v0.0.1
+    build:
+      context: .
+      target: production
