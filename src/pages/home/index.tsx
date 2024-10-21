@@ -128,6 +128,7 @@ export default function Home() {
                 url: item?.url,
                 child: item?.child,
               }))}
+              autoTransitionOptions={{ allow: true, seconds: 5 }}
             />
           </div>
         </div>

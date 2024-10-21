@@ -9,7 +9,7 @@
     "@types/node": "^16.18.114",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
-    "adewale-ui-toolbox": "^1.1.2",
+    "adewale-ui-toolbox": "^1.1.5",
     "chart.js": "^4.4.5",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",

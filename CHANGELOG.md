@@ -1,3 +1,7 @@
+##### 21.10.24
+
+> Auto transition image carousel option configuration
+
 ##### 20.10.24
 
 > Layout setup
