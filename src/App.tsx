@@ -9,6 +9,7 @@ import ReportsPage from "./pages/reports";
 import NotificationsPage from "./pages/notifications";
 import MessagesPage from "./pages/messages";
 import SettingsPage from "./pages/settings";
+import ProfilePage from "./pages/profile";
 
 function App() {
   const { show } = useAppSelector((state) => state.snackbar.value);
@@ -24,6 +25,7 @@ function App() {
             <Route path="/notifications" element={<NotificationsPage />} />
             <Route path="/messages" element={<MessagesPage />} />
             <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -5,9 +5,11 @@ import { toggleMenuView } from "../stores/appFunctionality/navMenuFunctions";
 import { Link } from "react-router-dom";
 import Loader from "../pages/loader";
 import NavigationMenu from "./navigationMenu";
-import MenuIcon from "../assets/icons/menu";
 import NotificationIcon from "../assets/icons/notification";
 import ChevronDoubleRight from "../assets/icons/chevron-double-right";
+import MenuIcon from "../assets/icons/menu";
+import BarsIcon from "../assets/icons/bar";
+import MobileMenu from "./mobile-menu";
 
 interface layoutProps {
   children: React.ReactNode;
@@ -36,33 +38,20 @@ function MainLayout({ children }: layoutProps) {
 
   return (
     <main className=" flex w-full h-screen overflow-hidden dark:bg-dark bg-white">
-      <nav className="z-10">
+      <nav className=" z-20">
         <NavigationMenu />
       </nav>
-      <div className=" w-full h-screen overflow-y-auto ">
-        <div className="w-full webkit-sticky top-0 z-[8] py-5 h-16 px-5 md:px-10">
+      <nav className="w-full fixed bottom-0 left-0 block md:hidden border-t dark:border-t-white z-10 bg-white dark:bg-dark">
+        <MobileMenu />
+      </nav>
+      <div className=" w-full h-screen">
+        <div className="w-full webkit-sticky top-0 z-[8] py-5 h-fit px-5 md:px-10 bg-white dark:bg-dark-500">
           <div className="flex items-center gap-2 text-primary">
-            {!fullView && (
-              <button
-                type="button"
-                title="toggle-bar"
-                onClick={() => toggleMenu()}
-                className=" h-fit"
-              >
-                {<ChevronDoubleRight />}
-              </button>
-            )}
             <div className="w-full flex justify-between">
-              <h5 className="w-full text-xl md:text-2xl font-semibold text-dark dark:text-white">
+              <h5 className="w-full text-xl md:text-2xl hidden md:block font-semibold text-dark dark:text-white">
                 {pageTitle}
               </h5>
-              <div className="flex items-center gap-5 w-full justify-end">
-                <div className=" relative group w-full flex justify-end cursor-pointer">
-                  <NotificationIcon />
-                  {/* <div className=" group-hover:flex absolute top-0 right-0 w-full hidden pt-10 justify-end">
-                      <NotificationsMenu />
-                    </div> */}
-                </div>
+              <div className="flex items-center gap-5 w-full md:justify-end">
                 <Link
                   to="#"
                   className="flex items-center justify-center w-8 h-8 aspect-square rounded-full overflow-hidden"
@@ -73,11 +62,21 @@ function MainLayout({ children }: layoutProps) {
                     className="w-full h-auto"
                   />
                 </Link>
-              </div>
+              </div>{" "}
+              {!fullView && (
+                <button
+                  type="button"
+                  title="toggle-bar"
+                  onClick={() => toggleMenu()}
+                  className=" h-fit block md:hidden dark:text-white"
+                >
+                  {<BarsIcon className=" size-8" />}
+                </button>
+              )}
             </div>
           </div>
         </div>
-        <div className=" w-full overflow-y-auto overflow-x-hidden pb-36 h-[calc(100vh-4rem)] px-5 md:px-10">
+        <div className=" w-full overflow-y-auto overflow-x-hidden pb-36 h-[calc(100vh-4rem)]">
           <div className={`w-full ${isLoading ? "block" : "hidden"}`}>
             <Loader
               failed={failedToLoad}
@@ -90,7 +89,9 @@ function MainLayout({ children }: layoutProps) {
               isLoading ? "hidden" : "flex"
             }`}
           >
-            <div className="max-w-screen-2xl w-full h-full">{children}</div>
+            <div className="max-w-screen-2xl w-full h-full mb-16">
+              {children}
+            </div>
           </div>
         </div>
       </div>

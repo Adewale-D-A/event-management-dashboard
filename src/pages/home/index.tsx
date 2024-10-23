@@ -1,9 +1,10 @@
 import { ImageCarousel } from "adewale-ui-toolbox";
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect } from "react";
 import DashboardCard from "../../components/cards/dashboard-cards";
 import { useAppDispatch } from "../../stores/hooks";
 import { updatePageProperties } from "../../stores/appFunctionality/pageProperties";
 import BarChart from "../../components/charts/bar-chart";
+import EventHistoryTable from "../../components/tables/event-history";
 
 export default function Home() {
   const dispatch = useAppDispatch();
@@ -30,17 +31,22 @@ export default function Home() {
     },
     {
       url: "https://s3-alpha-sig.figma.com/img/2c42/cc44/aeae4339db1a6549e1de209ac7d2a9d6?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=FawWLdy2u-QXVCd16sv437sSMIq29njvSytNbxhQrM3uZuS8-0kR-FT1RqTrNy8qMY07h1hKu108a4iNonkBG2knCe0viqvtz9ZaSQ6lUo7hELYHPfvK6UBdKEIkaE04-1KqUujXweRRy2LI4yzMcj6NCoNGhHpOIKSxVNW46IBnURyb4pEpo4n9fJkB5kcjij9bGXsUm7OopRIybVqOxFmuXA44mjLeegHby0v~CjXOMq7zrxR34LEdGHtSirB5pjc5QEc-ns4E2B5sXk8SKf0pwtTNUUqSHkOEvOTKhMXENTNLMhiemG7xf590dXjNw8pYRDiqOJWsBi9nYnbuIw__",
+      child: <CarouselContent />,
     },
     {
       url: "https://s3-alpha-sig.figma.com/img/f267/c3a2/2a8ab70e1713b526c436e78c86ff9adc?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=S393OMf5Sb9cV4KcCnxQogRghQqMrVlXmKvOgUrKKuyIFYz5Jk4PR2V-nrF5Iu5yxaiohhxXScbF8ih1grKqIgM2RuDm3gXJU6JzVUXsXw5H6eBjgC3bsDdSFV-PCdZnfrsynH8rgj6bEwKDK6baJG~~Zaje2ccq0KvXwSQRCoSYdWu33LPGEFB269K32DkKUUp4v5vEAP7vW4psNhKEUA1vs8FwsGgvzAr3sb3PAik6YOqLQAUhqO6w8Y4el-451dOIOrPdjKwKnGofaO-0~ncF4PXvykns0czbDYflDqT9PWW7Fz6C0R2FZQc27AHvnK0sXox~Zj3NFaoM1tzOkQ__",
+      child: <CarouselContent />,
     },
   ];
 
   return (
-    <section className="w-full flex flex-col items-center text-dark dark:text-white">
+    <section className="w-full flex flex-col items-center text-dark dark:text-white gap-3">
+      <h6 className="w-full text-xl md:text-2xl md:hidden font-semibold text-dark dark:text-white  px-5 md:px-10">
+        Welcome! here's your summary
+      </h6>
       <div className="w-full max-w-screen-xl flex flex-col gap-16">
         {/* cards */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5  px-5 md:px-10">
           {[
             {
               id: 1,
@@ -89,12 +95,12 @@ export default function Home() {
         </div>
 
         {/* events analytics and news */}
-        <div>
+        <div className=" flex flex-col gap-3  px-5 md:px-10">
           <h5 className=" font-semibold text-lg">
             Event Registration per month
           </h5>
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div className=" min-h-96 border p-5 rounded-md h-full w-full flex justify-center">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-5 z-2">
+            <div className=" md:min-h-96 border dark:border-none dark:bg-dark-500 p-5 rounded-md h-full w-full flex justify-center">
               <BarChart
                 data={{
                   labels: [
@@ -131,6 +137,12 @@ export default function Home() {
               autoTransitionOptions={{ allow: true, seconds: 5 }}
             />
           </div>
+        </div>
+        <div className=" flex flex-col gap-3">
+          <h5 className=" font-semibold text-lg  px-5 md:px-10">
+            Event Registration per month
+          </h5>
+          <EventHistoryTable />
         </div>
       </div>
     </section>

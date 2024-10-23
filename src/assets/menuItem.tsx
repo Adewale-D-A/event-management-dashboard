@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 import { useAppSelector } from "../stores/hooks";
-import MenuIcon from "./icons/menu";
 import HomeIcon from "./icons/home";
 import CalendarIcon from "./icons/calendar";
 import ReportIcon from "./icons/report";
@@ -190,7 +189,7 @@ export default function NavigationMenuItems() {
                 to={items?.url}
                 className={({ isActive }) =>
                   isActive
-                    ? `flex justify-between w-full p-2 md:p-3 transition-all rounded-md text-white dark:text-white bg-primary `
+                    ? `flex justify-between w-full p-2 md:p-3 transition-all rounded-md text-white dark:text-white bg-[#8576FF] `
                     : `flex justify-between w-full p-2 md:p-3 transition-all  rounded-md hover:bg-primary/10 text-dark dark:text-white hover:pl-4`
                 }
               >

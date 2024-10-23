@@ -31,8 +31,8 @@ function FullMenuView() {
 
   return (
     <div
-      className={`flex h-screen overflow-y-auto text-white flex-col justify-between gap-10 transition-all ${
-        fullView ? "w-[260px]" : "hidden md:w-20 md:flex"
+      className={`h-screen overflow-y-auto border-r dark:border-none text-white flex-col justify-between gap-10 transition-all ${
+        fullView ? "w-[260px] flex" : "hidden md:w-20 md:flex"
       }`}
     >
       {/* nav items section */}

@@ -1,3 +1,8 @@
+##### 23.10.24
+
+> Dark theming fixes
+> Mobile responsiveness update
+
 ##### 21.10.24
 
 > Auto transition image carousel option configuration
