@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply dark:bg-[#484554] bg-[#FCF7FF] dark:text-[#FCF7FF] text-[#000000];
-  }
-}
-
-
-
 /* toggle button */
 
 .slider:before {
@@ -37,4 +29,10 @@
   -webkit-transform: translateX(13px);
   -ms-transform: translateX(13px);
   transform: translateX(13px);
+}
+
+.backgrop-bg-filter {
+  background-color: rgb(54, 79, 0, 0.2);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }

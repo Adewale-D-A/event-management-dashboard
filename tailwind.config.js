@@ -10,14 +10,10 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
         primary: {
           DEFAULT: "#8576FF",
+          500: "#8576FF",
         },
         dark: {
           DEFAULT: "#484554",
@@ -27,4 +23,9 @@ module.exports = {
     },
     plugins: [],
   },
+  safelist: [
+    "primary", // Add more classes as needed
+    // Patterns are also supported
+    "primary-*", // Safelists all brand color utilities
+  ],
 };

@@ -131,8 +131,8 @@ export default function MobileMenu() {
               to={items?.url}
               className={({ isActive }) =>
                 isActive
-                  ? `flex justify-between w-full p-2 md:p-3 transition-all py-4  dark:text-white border-primary border-t-4 `
-                  : `flex justify-between w-full p-2 md:p-3 transition-all py-4 rounded-md hover:bg-primary/10 text-dark dark:text-white hover:pl-4`
+                  ? `flex justify-center w-full p-2 md:p-3 transition-all py-4  dark:text-white border-primary border-t-4 `
+                  : `flex justify-center w-full p-2 md:p-3 transition-all py-4 rounded-md hover:bg-primary/10 text-dark dark:text-white hover:pl-4`
               }
             >
               <div className={`flex items-center flex-col gap-3 `}>

@@ -8,6 +8,8 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
+import { useAppSelector } from "../../stores/hooks";
+import { useEffect } from "react";
 
 ChartJS.register(
   CategoryScale,
@@ -57,5 +59,12 @@ export default function BarChart({
     }[];
   };
 }) {
+  const isDarkMode = useAppSelector(
+    (state) => state?.menuFunctions?.value?.isDarkMode
+  );
+  useEffect(() => {
+    ChartJS.defaults.color = isDarkMode ? "#fff" : "#8576FF";
+  }, [isDarkMode]);
+
   return <Bar options={options} data={data} />;
 }

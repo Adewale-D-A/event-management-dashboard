@@ -7,6 +7,8 @@ import NotificationIcon from "./icons/notification";
 import MessageIcon from "./icons/message";
 import SettingIcon from "./icons/settings";
 import SpeakerIcon from "./icons/speaker";
+import UnreadIndicator from "../components/status/unread";
+import NotificationPing from "./icons/notification-ping";
 
 export default function NavigationMenuItems() {
   const fullView = useAppSelector(
@@ -189,8 +191,8 @@ export default function NavigationMenuItems() {
                 to={items?.url}
                 className={({ isActive }) =>
                   isActive
-                    ? `flex justify-between w-full p-2 md:p-3 transition-all rounded-md text-white dark:text-white bg-[#8576FF] `
-                    : `flex justify-between w-full p-2 md:p-3 transition-all  rounded-md hover:bg-primary/10 text-dark dark:text-white hover:pl-4`
+                    ? `flex justify-between items-center w-full p-2 md:p-3 transition-all rounded-md text-white dark:text-white bg-primary-500 `
+                    : `flex justify-between items-center w-full p-2 md:p-3 transition-all  rounded-md hover:bg-primary/10 text-dark dark:text-white hover:pl-4`
                 }
               >
                 <div
@@ -198,25 +200,34 @@ export default function NavigationMenuItems() {
                     fullView ? "" : "w-full justify-center"
                   }`}
                 >
-                  <span className="">{items?.icon}</span>
+                  {items?.notification?.show && !fullView ? (
+                    <NotificationPing />
+                  ) : (
+                    <span className="">{items?.icon}</span>
+                  )}
                   {fullView && <span className=" ">{items?.label}</span>}{" "}
                 </div>
-                {items?.hasSubMenu && fullView && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6  "
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                )}
+                <span>
+                  {items?.notification?.show && fullView && (
+                    <UnreadIndicator number={items?.notification?.value} />
+                  )}
+                  {items?.hasSubMenu && fullView && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-6 h-6  "
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  )}
+                </span>
               </NavLink>
               {items?.hasSubMenu && fullView && (
                 <div className=" w-full ml-5 group-hover:my-4 transition-all">

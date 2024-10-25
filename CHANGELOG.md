@@ -1,3 +1,7 @@
+##### 25.10.24
+
+> Event Management Dashboard app completion
+
 ##### 23.10.24
 
 > Dark theming fixes

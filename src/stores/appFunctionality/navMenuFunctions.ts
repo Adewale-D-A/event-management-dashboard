@@ -4,16 +4,20 @@ export const navMenuFunctions = createSlice({
   name: "navigation menu functionality",
   initialState: {
     value: {
-      fullMenuView: true,
+      fullMenuView: false,
+      isDarkMode: false,
     },
   },
   reducers: {
     toggleMenuView: (state) => {
       state.value.fullMenuView = !state.value.fullMenuView;
     },
+    updateThemeMode: (state, action) => {
+      state.value.isDarkMode = action?.payload?.isDark;
+    },
   },
 });
 
-export const { toggleMenuView } = navMenuFunctions.actions;
+export const { toggleMenuView, updateThemeMode } = navMenuFunctions.actions;
 
 export default navMenuFunctions.reducer;

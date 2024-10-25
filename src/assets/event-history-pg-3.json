@@ -1,0 +1,72 @@
+[
+  {
+    "id": 21,
+    "event_name": "Design systems",
+    "date": "2024-6-15",
+    "speaker": "Michael Joe",
+    "status": "Completed"
+  },
+  {
+    "id": 22,
+    "event_name": "Maintenance Awareness",
+    "date": "2024-05-05",
+    "speaker": "Dr. Kutra Omole",
+    "status": "In Progress"
+  },
+  {
+    "id": 23,
+    "event_name": "Agriculture Improvements",
+    "date": "2024-04-01",
+    "speaker": "Dr. Samuel Dan",
+    "status": "In Progress"
+  },
+  {
+    "id": 24,
+    "event_name": "Analytics and Systems",
+    "date": "2024-2-22",
+    "speaker": "Samson Delin",
+    "status": "Completed"
+  },
+  {
+    "id": 25,
+    "event_name": "Workplace Productivity",
+    "date": "2024-01-12",
+    "speaker": "Umab Togolo",
+    "status": "Completed"
+  },
+  {
+    "id": 26,
+    "event_name": "System Manipulation",
+    "date": "2024-09-28",
+    "speaker": "Engr. Mani Paul",
+    "status": "In Progress"
+  },
+  {
+    "id": 27,
+    "event_name": "Writing Workshop",
+    "date": "2024-10-12",
+    "speaker": "Ken Adams",
+    "status": "In Progress"
+  },
+  {
+    "id": 28,
+    "event_name": "Progress Report Writing",
+    "date": "2024-11-22",
+    "speaker": "Fimil Sam",
+    "status": "Completed"
+  },
+  {
+    "id": 29,
+    "event_name": "Further Improvements",
+    "date": "2024-10-11",
+    "speaker": "Fenandez Yuki",
+    "status": "In Progress"
+  },
+  {
+    "id": 30,
+    "event_name": "Web Solution Architecture",
+    "date": "2024-02-30",
+    "speaker": "Engr. Adewale Azeez",
+    "status": "In Progress"
+  }
+]

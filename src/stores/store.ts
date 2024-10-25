@@ -7,6 +7,9 @@ import networkStatus from "./appFunctionality/networkError";
 import pageProperties from "./appFunctionality/pageProperties";
 //app functionality
 
+// services
+import eventHistories from "./services/event-histories";
+
 export const adminStore = () => {
   return configureStore({
     reducer: {
@@ -15,6 +18,9 @@ export const adminStore = () => {
       menuFunctions: navMenuFunctions,
       snackbar: snackBar,
       networkStatus: networkStatus,
+
+      // services
+      eventHsitories: eventHistories,
     },
     middleware: (getDefaultMiddleware: any) =>
       getDefaultMiddleware({

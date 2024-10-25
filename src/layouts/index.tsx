@@ -5,9 +5,6 @@ import { toggleMenuView } from "../stores/appFunctionality/navMenuFunctions";
 import { Link } from "react-router-dom";
 import Loader from "../pages/loader";
 import NavigationMenu from "./navigationMenu";
-import NotificationIcon from "../assets/icons/notification";
-import ChevronDoubleRight from "../assets/icons/chevron-double-right";
-import MenuIcon from "../assets/icons/menu";
 import BarsIcon from "../assets/icons/bar";
 import MobileMenu from "./mobile-menu";
 

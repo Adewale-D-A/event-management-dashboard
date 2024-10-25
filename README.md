@@ -4,6 +4,8 @@
 
 > TailwindCSS is used for the CSS styling, therefore, technical knowledge tailwindCSS library, React.JS and TypeScript are prerequisite to collaborate on this project.
 
+### [DEMO](https://event-management-dashboard-virid.vercel.app/) Live Demo
+
  <table>
     <tr>
       <th>Package Name</th>
@@ -70,3 +72,5 @@ step 1:
 run **npm install** (to install all the dependencies)
 step 2:
 run **npm start** (start application on port :3000)
+
+### [FIGMA DESIGN](https://www.figma.com/design/gTMY3wjNgeNg7OVR0agiGb/Alphatwelve-Front-end-Developer-assessment?node-id=0-1&node-type=canvas&t=IURP47nf5ZeECCmm-0) Design

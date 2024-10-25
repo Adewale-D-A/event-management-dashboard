@@ -1,8 +1,10 @@
 import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
-
 import { useAppDispatch, useAppSelector } from "../stores/hooks";
-import { toggleMenuView } from "../stores/appFunctionality/navMenuFunctions";
+import {
+  toggleMenuView,
+  updateThemeMode,
+} from "../stores/appFunctionality/navMenuFunctions";
 import NavigationMenuItems from "../assets/menuItem";
 import ToggleButton from "../components/button/toggle";
 import ChevronDoubleLeft from "../assets/icons/chevron-double-left";
@@ -25,9 +27,10 @@ function FullMenuView() {
   }, []);
 
   const darkModeHandler = useCallback(() => {
+    dispatch(updateThemeMode({ isDark: !darkMode }));
     setDarkMode((prev) => !prev);
     document.body.classList.toggle("dark");
-  }, []);
+  }, [darkMode]);
 
   return (
     <div

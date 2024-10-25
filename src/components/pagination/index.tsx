@@ -53,9 +53,9 @@ export default function Pagination({
             key={index}
             type="button"
             onClick={() => setCurrentPage(index + 1)}
-            className={` min-h-5 min-w-5 aspect-square flex items-center justify-center rounded-full p-3 hover:border-primary transition-all cursor-pointer ${
+            className={` min-h-5 min-w-5 aspect-square flex items-center justify-center rounded-full p-3 hover:border hover:border-primary transition-all cursor-pointer ${
               index + 1 === pagination?.current_page
-                ? "border-primary bg-primary text-white "
+                ? "border-primary bg-primary-500 text-white "
                 : ""
             }}`}
           >
@@ -72,7 +72,7 @@ export default function Pagination({
         className={`${
           pagination?.last_page <= pagination?.current_page
             ? "border-gray-500 cursor-not-allowed"
-            : "hover:bg-primary hover:text-white border-primary dark:border-none cursor-pointer border "
+            : "hover:bg-primary hover:text-white dark:border-none cursor-pointer border "
         }  size-10 aspect-square  p-3 flex items-center justify-center transition-all dark:bg-dark-500 `}
         onClick={() => showNextproductsArray()}
       >
