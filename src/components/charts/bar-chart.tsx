@@ -19,6 +19,7 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+ChartJS.defaults.color = "#484554";
 
 export const options = {
   responsive: true,
@@ -63,7 +64,7 @@ export default function BarChart({
     (state) => state?.menuFunctions?.value?.isDarkMode
   );
   useEffect(() => {
-    ChartJS.defaults.color = isDarkMode ? "#fff" : "#8576FF";
+    ChartJS.defaults.color = isDarkMode ? "#fff" : "#484554";
   }, [isDarkMode]);
 
   return <Bar options={options} data={data} />;
