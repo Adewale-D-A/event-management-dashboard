@@ -81,7 +81,7 @@ export default function EventHistoryTable() {
               </Select>
             </div>
             <span className="w-full text-left font-semibold whitespace-nowrap">
-              Displaying 10 results
+              Displaying {pagination?.per_page} results
             </span>
           </div>
           <div className="w-full md:w-fit flex flex-col md:flex-row justify-end items-center gap-2 ">
