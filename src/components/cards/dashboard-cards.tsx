@@ -14,7 +14,7 @@ export default function DashboardCard({
   };
 }) {
   return (
-    <div className="flex flex-col gap-8 items-stretch justify-between border dark:border-none dark:bg-dark-500 dark:text-white p-4 rounded-sm">
+    <div className="flex flex-col gap-8 items-stretch justify-between border dark:border-none dark:bg-dark-500 dark:text-white p-4 rounded-sm hover:scale-105 cursor-pointer transition-all hover:border-primary-500">
       <div className=" flex flex-col gap-1">
         <div className=" flex items-start gap-3 text-gray-500 dark:text-white">
           <h6 className="">{label}</h6>

@@ -1,5 +1,6 @@
 ##### 25.10.24
 
+> Dashboard overview cards hover effect
 > Event Management Dashboard app completion
 
 ##### 23.10.24
