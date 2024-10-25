@@ -1,5 +1,6 @@
 ##### 25.10.24
 
+> Mark as comleted
 > Dashboard overview cards hover effect
 > Event Management Dashboard app completion
 

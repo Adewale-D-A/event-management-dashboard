@@ -42,7 +42,7 @@ export default function EventDetail({
     setOpen(false);
   }, [data]);
   const handleMarkAsCompleted = useCallback(() => {
-    dispatch(replaceEventHistoryInList(data));
+    dispatch(replaceEventHistoryInList({ ...data, status: "Completed" }));
     dispatch(
       openSnackbar({
         message: "Event successfully updated",
