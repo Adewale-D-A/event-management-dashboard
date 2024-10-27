@@ -1,3 +1,8 @@
+##### 27.10.24
+
+> Main content screen height restriction removal
+> Outside menu click to close modal
+
 ##### 25.10.24
 
 > Mark as comleted

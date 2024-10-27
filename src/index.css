@@ -36,3 +36,7 @@
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
+.webkit-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}

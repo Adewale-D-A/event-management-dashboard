@@ -12,9 +12,7 @@ function NavigationMenu() {
         fullView ? "fixed md:relative top-0 left-0" : ""
       } bg-white dark:bg-dark-500`}
     >
-      <div className="flex">
-        <FullMenuView /> {/* full view  */}
-      </div>
+      <FullMenuView />
     </div>
   );
 }

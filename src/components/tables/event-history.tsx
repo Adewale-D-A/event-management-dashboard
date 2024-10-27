@@ -182,19 +182,8 @@ export default function EventHistoryTable() {
           </div>
         </div>
       </div>
-
-      {/*open more detail*/}
-      <ModalTemplate
-        open={openDetail}
-        setOpen={setOpenDetail}
-        showXicon={true}
-        title="Event Name"
-        className=" max-w-md"
-      >
-        <div className="w-full">
-          <EventDetail id={selectedId} setOpen={setOpenDetail} />
-        </div>
-      </ModalTemplate>
+      {/* event detail modal */}
+      <EventDetail id={selectedId} setOpen={setOpenDetail} open={openDetail} />
     </>
   );
 }

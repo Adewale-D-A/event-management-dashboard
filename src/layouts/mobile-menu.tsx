@@ -1,8 +1,7 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import HomeIcon from "../assets/icons/home";
 import CalendarIcon from "../assets/icons/calendar";
 import ReportIcon from "../assets/icons/report";
-import NotificationIcon from "../assets/icons/notification";
 import SpeakerIcon from "../assets/icons/speaker";
 import UserIcon from "../assets/icons/user";
 export default function MobileMenu() {
