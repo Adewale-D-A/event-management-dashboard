@@ -1,3 +1,7 @@
+##### 29.10.24
+
+> Carousel images url updates
+
 ##### 27.10.24
 
 > Main content screen height restriction removal
