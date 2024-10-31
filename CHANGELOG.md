@@ -1,3 +1,7 @@
+##### 31.10.24
+
+> search input desktop width update
+
 ##### 29.10.24
 
 > Carousel images url updates

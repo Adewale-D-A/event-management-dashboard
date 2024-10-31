@@ -43,21 +43,21 @@ export default function EventHistoryTable() {
       <div className="w-full flex flex-col gap-5 ">
         <div className=" w-full justify-between gap-6 flex items-center flex-col lg:flex-row px-5 md:px-10">
           <div className="w-full md:w-fit flex flex-col md:flex-row items-center gap-3">
-            <div className="w-full md:max-w-48">
+            <div className="w-full md:min-w-36 lg:min-w-48">
               <Search
                 placeholder="Search..."
                 search={search}
                 setSearch={setSearch}
               />
             </div>
-            <div className="w-full md:max-w-24">
+            <div className="w-full md:min-w-24">
               <Select value={date} setValue={setDate} id="date">
                 <option value="" disabled>
                   Date
                 </option>
               </Select>
             </div>
-            <div className="w-full md:max-w-24">
+            <div className="w-full md:min-w-24">
               <Select value={status} setValue={setStatus} id="status-filter">
                 <option value="All" disabled>
                   Status
@@ -73,7 +73,7 @@ export default function EventHistoryTable() {
                 </option>
               </Select>
             </div>
-            <div className="w-full md:max-w-24">
+            <div className="w-full md:min-w-24">
               <Select value={name} setValue={setDate} id="name-filter">
                 <option value="" disabled>
                   Name
@@ -90,7 +90,7 @@ export default function EventHistoryTable() {
               <div className="w-full max-w-36 md:w-24">
                 <Select value={sort} setValue={setSort} id="sort">
                   <option value="" disabled>
-                    Most Resent
+                    Most Recent
                   </option>
                   <option value="asc" className=" text-black">
                     Ascending
