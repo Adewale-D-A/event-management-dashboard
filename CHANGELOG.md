@@ -1,3 +1,7 @@
+##### 24.11.24
+
+> Logo updates
+
 ##### 31.10.24
 
 > search input desktop width update
